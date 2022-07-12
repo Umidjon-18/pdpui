@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pdpui/pages/SignUp_page.dart';
 import 'package:pdpui/pages/home_page.dart';
 import 'package:pdpui/pages/login_page.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      home: const SignUpPage(),
       routes: {
         HomePage.id:(context) => const HomePage(),
         LoginPage.id:(context) => const LoginPage(),

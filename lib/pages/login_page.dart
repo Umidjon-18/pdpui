@@ -49,7 +49,6 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 20),
             Expanded(
               child: Container(
-                padding: const EdgeInsets.all(30),
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -57,125 +56,128 @@ class _LoginPageState extends State<LoginPage> {
                     topRight: Radius.circular(60),
                   ),
                 ),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      const SizedBox(height: 60),
-                      // #login #password
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: const [
-                            BoxShadow(
-                                color: Color.fromRGBO(171, 171, 171, 0.7),
-                                blurRadius: 20,
-                                offset: Offset(0, 10))
-                          ],
+                child: Padding(
+                  padding: const EdgeInsets.all(18.0),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        const SizedBox(height: 60),
+                        // #login #password
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Color.fromRGBO(171, 171, 171, 0.7),
+                                  blurRadius: 20,
+                                  offset: Offset(0, 10))
+                            ],
+                          ),
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                  border: Border(
+                                      bottom:
+                                          BorderSide(color: Colors.grey[200]!)),
+                                ),
+                                child: const TextField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Email',
+                                    hintStyle: TextStyle(color: Colors.grey),
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(10),
+                                decoration: BoxDecoration(
+                                  border: Border(
+                                      bottom:
+                                          BorderSide(color: Colors.grey[200]!)),
+                                ),
+                                child: const TextField(
+                                  decoration: InputDecoration(
+                                    hintText: 'Password',
+                                    hintStyle: TextStyle(color: Colors.grey),
+                                    border: InputBorder.none,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                        child: Column(
+                        const SizedBox(height: 40),
+                        // #login
+                        Container(
+                          margin: const EdgeInsets.symmetric(horizontal: 50),
+                          height: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: Colors.green[800],
+                          ),
+                          child: const Center(
+                            child: Text(
+                              'Login',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 30),
+                        const Text(
+                          'Login with SNS',
+                          style: TextStyle(
+                              color: Colors.grey, fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(height: 30),
+                        Row(
                           children: [
-                            Container(
-                              padding: const EdgeInsets.all(10),
-                              decoration: BoxDecoration(
-                                border: Border(
-                                    bottom:
-                                        BorderSide(color: Colors.grey[200]!)),
-                              ),
-                              child: const TextField(
-                                decoration: InputDecoration(
-                                  hintText: 'Email',
-                                  hintStyle: TextStyle(color: Colors.grey),
-                                  border: InputBorder.none,
+                            Expanded(
+                              child: Container(
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                                child: const Center(
+                                  child: Text(
+                                    'Facebook',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                            Container(
-                              padding: const EdgeInsets.all(10),
-                              decoration: BoxDecoration(
-                                border: Border(
-                                    bottom:
-                                        BorderSide(color: Colors.grey[200]!)),
-                              ),
-                              child: const TextField(
-                                decoration: InputDecoration(
-                                  hintText: 'Password',
-                                  hintStyle: TextStyle(color: Colors.grey),
-                                  border: InputBorder.none,
+                            const SizedBox(width: 30),
+                            Expanded(
+                              child: Container(
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  color: Colors.black,
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                                child: const Center(
+                                  child: Text(
+                                    'Github',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
                           ],
                         ),
-                      ),
-                      const SizedBox(height: 40),
-                      // #login
-                      Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 50),
-                        height: 50,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.green[800],
-                        ),
-                        child: const Center(
-                          child: Text(
-                            'Login',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 30),
-                      const Text(
-                        'Login with SNS',
-                        style: TextStyle(
-                            color: Colors.grey, fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(height: 30),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Container(
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.blue,
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  'Facebook',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 30),
-                          Expanded(
-                            child: Container(
-                              height: 50,
-                              decoration: BoxDecoration(
-                                color: Colors.black,
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  'Github',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
