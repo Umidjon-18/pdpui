@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pdpui/pages/shop2_page.dart';
 import 'package:pdpui/pages/shop_page.dart';
 import 'package:pdpui/pages/sign_up_page.dart';
 import 'package:pdpui/pages/home_page.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ShoppingPage(),
+      home: const ShoppingPageTwo(),
       routes: {
         HomePage.id:(context) => const HomePage(),
         LoginPage.id:(context) => const LoginPage(),
